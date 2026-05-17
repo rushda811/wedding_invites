@@ -69,3 +69,6 @@ export default function RootLayout({
 
 
 
+// git add .
+// git commit -m "updated design"
+// git push

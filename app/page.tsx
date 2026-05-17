@@ -436,23 +436,21 @@ blur-[180px] md:blur-[180px] sm:blur-[80px]                opacity-30
           {/* VIDEO BACKGROUND */}
 
 <div className="absolute inset-0 -z-10 overflow-hidden bg-black">
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-    className="
-      absolute
-      inset-0
-      w-full
-      h-full
-      object-cover
-      object-center
-    "
-  >
-    <source src="/hero-video.mp4" type="video/mp4" />
-  </video>
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="
+    absolute inset-0
+    w-full h-full
+    object-contain
+    bg-black
+  "
+>
+  <source src="/hero-video.mp4" type="video/mp4" />
+</video>
 
   {/* DARK OVERLAY */}
   <div className="absolute inset-0 bg-black/20" />
