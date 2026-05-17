@@ -445,12 +445,9 @@ blur-[180px] md:blur-[180px] sm:blur-[80px]                opacity-30
   >
     <source src="/hero-video.mp4" type="video/mp4" />
   </video>
-</div>
-
   {/* DARK OVERLAY */}
   <div className="absolute inset-0 bg-black/20" />
-</div>
-
+  </div>
           <motion.div
             initial={{
               opacity: 0,
