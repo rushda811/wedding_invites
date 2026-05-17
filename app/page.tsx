@@ -432,45 +432,26 @@ blur-[180px] md:blur-[180px] sm:blur-[80px]                opacity-30
 
       {/* ENVELOPE */}
      {!showIntro && (
-<section
-  className="
-    relative
-    w-full
-    h-screen
-    min-h-screen
-    overflow-hidden
-    flex
-    items-center
-    justify-center
-    px-6
-  "
->
-
+<section className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center px-6">
           {/* VIDEO BACKGROUND */}
 
-<div className="absolute inset-0 -z-10 overflow-hidden bg-black">  <video
+<div className="absolute inset-0 -z-10 overflow-hidden bg-black">
+  <video
     autoPlay
     muted
     loop
     playsInline
     preload="auto"
-    style={{
-  minWidth: '100%',
-  minHeight: '100%',
-}}
-className="
-  absolute
-  inset-0
-  w-full
-  h-full
-  object-cover
-  scale-[1.15]
-"
+    className="
+      absolute
+      inset-0
+      w-full
+      h-full
+      object-cover
+      object-center
+    "
   >
-    <source
-      src="/hero-video.mp4"
-      type="video/mp4"
-    />
+    <source src="/hero-video.mp4" type="video/mp4" />
   </video>
 
   {/* DARK OVERLAY */}
