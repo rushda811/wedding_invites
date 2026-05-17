@@ -435,19 +435,31 @@ blur-[180px] md:blur-[180px] sm:blur-[80px]                opacity-30
 <section className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center px-6">
           {/* VIDEO BACKGROUND */}
 
-<div className="absolute inset-0 -z-10 flex items-center justify-center bg-black">
+<div className="absolute inset-0 -z-10 overflow-hidden bg-black">
   <video
     autoPlay
     muted
     loop
     playsInline
-    className="max-w-full max-h-full object-contain"
+    preload="auto"
+    className="
+      absolute
+      top-1/2 left-1/2
+      min-w-full
+      min-h-full
+      w-auto h-auto
+      -translate-x-1/2
+      -translate-y-1/2
+      object-cover
+    "
   >
     <source src="/hero-video.mp4" type="video/mp4" />
   </video>
-  {/* DARK OVERLAY */}
-  <div className="absolute inset-0 bg-black/20" />
-  </div>
+
+  {/* elegant cinematic overlay */}
+  <div className="absolute inset-0 bg-black/25" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
+</div>
           <motion.div
             initial={{
               opacity: 0,
