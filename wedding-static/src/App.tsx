@@ -93,8 +93,16 @@ export default function App() {
               >
                 <div className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-burgundy/70">A Royal Invitation</div>
                 <h1 className="mt-3 font-display italic text-4xl sm:text-6xl text-burgundy">
-                  <span className="text-shimmer">Your Presence is Requested</span>
-                </h1>
+<span
+  className="bg-clip-text text-transparent font-display italic text-center block
+             text-3xl sm:text-5xl tracking-wide leading-tight"
+  style={{
+    backgroundImage:
+      "linear-gradient(90deg, #2b160f 0%, #6b3f12 35%, #b8892f 60%, #6b3f12 85%, #2b160f 100%)",
+  }}
+>
+  Your Presence is Requested
+</span>                </h1>
               </motion.div>
               <Envelope opened={opened} onOpen={handleOpen} />
             </div>
@@ -129,26 +137,51 @@ export default function App() {
               variants={{ show: { transition: { staggerChildren: 0.15 } } }}
               className="relative z-10 max-w-2xl"
             >
-              <motion.p variants={fadeUp} className="font-arabic text-3xl sm:text-5xl text-burgundy leading-relaxed drop-shadow-sm" dir="rtl">
-                بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
-              </motion.p>
-              <motion.p variants={fadeUp} className="mt-2 italic text-sm sm:text-base text-burgundy/80 tracking-wide">
-                Bismillāhir Raḥmānir Raḥīm
-              </motion.p>
+          <motion.p
+  variants={fadeUp}
+  className="font-arabic text-3xl sm:text-5xl leading-relaxed text-center"
+  dir="rtl"
+  style={{
+    color: "#f6e7c7",
+    textShadow: "0 2px 10px rgba(212,175,106,0.35)",
+  }}
+>
+  بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+</motion.p>
 
               <motion.div variants={fadeUp} className="my-8 ornament">
                 <span className="ornament-line" />
                 <svg viewBox="0 0 24 24" className="w-3 h-3 fill-gold"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
-                <span className="text-gold text-[10px] sm:text-xs tracking-[0.4em] uppercase whitespace-nowrap">With Allah's Blessings</span>
-                <svg viewBox="0 0 24 24" className="w-3 h-3 fill-gold"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
                 <span className="ornament-line" />
               </motion.div>
+<motion.h1
+  variants={fadeUp}
+  className="font-display text-5xl sm:text-7xl leading-[1.05] font-display-tight text-center"
+>
+  <span
+    className="bg-clip-text text-transparent"
+    style={{
+      backgroundImage:
+        "linear-gradient(90deg, #2a160f 0%, #6b3f12 35%, #b8892f 60%, #6b3f12 85%, #2a160f 100%)",
+    }}
+  >
+    Shahansad
+  </span>
 
-              <motion.h1 variants={fadeUp} className="font-display text-5xl sm:text-7xl text-burgundy leading-[1.05] font-display-tight">
-                <span className="text-shimmer">Shahansad</span>
-                <span className="block font-script text-4xl sm:text-6xl text-gold-deep my-2 sm:my-3">&</span>
-                <span className="text-shimmer">Rushda</span>
-              </motion.h1>
+  <span className="block font-script text-4xl sm:text-6xl text-gold-deep my-2 sm:my-3">
+    &
+  </span>
+
+  <span
+    className="bg-clip-text text-transparent"
+    style={{
+      backgroundImage:
+        "linear-gradient(90deg, #2a160f 0%, #6b3f12 35%, #b8892f 60%, #6b3f12 85%, #2a160f 100%)",
+    }}
+  >
+    Fathima Rushda
+  </span>
+</motion.h1>
 
               <motion.p variants={fadeUp} className="mt-8 tracking-[0.4em] uppercase text-[10px] sm:text-xs text-burgundy/70">
                 Request the honour of your presence
@@ -171,9 +204,23 @@ export default function App() {
             </motion.div>
           </section>
 
-          <PersonSection kind="The Groom" name="Shahansad" address="S/o Mr. & Mrs. Abdul Rahman" location="Kannur, Kerala" image={groomImg} reverse={false} />
-          <PersonSection kind="The Bride" name="Rushda" address="D/o Mr. & Mrs. Mohammed Ali" location="Padikkal, Kerala" image={brideUpload} reverse />
+    <PersonSection
+  kind="The Groom"
+  name="Shahansad ck"
+  address="S/o Mr. & Mrs. Abdul Rahman"
+  location="Kannur, Kerala"
+  image={groomImg}
+  reverse={false}
+/>
 
+<PersonSection
+  kind="The Bride"
+  name=" Fathima Rushda"
+  address="D/o Mr. & Mrs. Mohammed Ali"
+  location="Padikkal, Kerala"
+  image={brideUpload}
+  reverse
+/>
           <section className="relative px-5 py-20 sm:py-28 text-center bg-gradient-to-b from-ivory via-secondary/30 to-ivory overflow-hidden">
             <DecorBorder />
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.4 }} variants={fadeUp}>
@@ -359,7 +406,7 @@ export default function App() {
               <span className="h-px w-10 bg-gold/60" />
             </div>
             <p className="mt-4 font-script text-3xl text-gold-soft">Made with Love & Faith</p>
-            <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-ivory/60">Shahansad & Rushda · 22 . 12 . 2027</p>
+            <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-ivory/60">Shahansad ck & Fathima Rushda · 22 . 12 . 2027</p>
 
             <div className="mt-6 flex items-center justify-center gap-2">
               <span className="text-[10px] tracking-[0.3em] uppercase text-ivory/50">Made by</span>
@@ -416,7 +463,15 @@ function PersonSection({
         >
           <div className="text-[10px] sm:text-xs tracking-[0.5em] uppercase text-gold">{kind}</div>
           <h2 className="mt-3 font-display italic text-5xl sm:text-6xl text-burgundy leading-tight">
-            <span className="text-shimmer">{name}</span>
+            <span
+  className="bg-clip-text text-transparent font-display italic"
+  style={{
+    backgroundImage:
+      "linear-gradient(90deg, #ff2e88 0%, #ff4da6 30%, #ff77c8 60%, #ff2e88 100%)",
+  }}
+>
+  {name}
+</span>
           </h2>
           <div className="mt-4 h-px w-16 bg-gold/50 mx-auto sm:mx-0" />
           <p className="mt-4 text-sm text-muted-foreground">{address}</p>

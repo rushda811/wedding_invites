@@ -188,7 +188,7 @@ export function Envelope({
           }}
         />
 
-       {/* HEART SEAL — LUXURY GOLD FOIL (PROFESSIONAL) */}
+        {/* HEART SEAL — SHINING GOLD */}
 <motion.div
   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
   animate={opened ? { scale: 0, opacity: 0 } : { scale: 1, opacity: 1 }}
@@ -196,33 +196,32 @@ export function Envelope({
 >
   <svg viewBox="0 0 24 24" className="w-14 h-14 sm:w-16 sm:h-16">
     <defs>
-      {/* premium foil gold */}
-      <linearGradient id="luxGold" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#fff8d6" />
-        <stop offset="18%" stopColor="#f6e27a" />
-        <stop offset="40%" stopColor="#d4af37" />
-        <stop offset="65%" stopColor="#b8891a" />
-        <stop offset="85%" stopColor="#f1d97a" />
-        <stop offset="100%" stopColor="#fff1b8" />
+      {/* gold gradient */}
+      <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#fff6c7" />
+        <stop offset="25%" stopColor="#f7d774" />
+        <stop offset="55%" stopColor="#d4af37" />
+        <stop offset="80%" stopColor="#b8860b" />
+        <stop offset="100%" stopColor="#fff1a8" />
       </linearGradient>
 
-      {/* soft emboss shadow (gives pressed luxury feel) */}
-      <filter id="softEmboss">
-        <feDropShadow dx="0" dy="1" stdDeviation="1" floodColor="rgba(0,0,0,0.35)" />
-      </filter>
+      {/* soft highlight */}
+      <radialGradient id="goldHighlight" cx="30%" cy="25%" r="60%">
+        <stop offset="0%" stopColor="rgba(255,255,255,0.65)" />
+        <stop offset="60%" stopColor="rgba(255,255,255,0)" />
+      </radialGradient>
     </defs>
 
-    {/* base heart */}
+    {/* base gold heart */}
     <path
       d="M12 21s-7-4.534-9.5-9.05C.5 8 3 4 6.5 4c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 3.5 0 6 4 4 7.95C19 16.466 12 21 12 21z"
-      fill="url(#luxGold)"
-      filter="url(#softEmboss)"
+      fill="url(#goldShine)"
     />
 
-    {/* subtle top light reflection (not shiny, just foil catch) */}
+    {/* shine overlay */}
     <path
       d="M12 21s-7-4.534-9.5-9.05C.5 8 3 4 6.5 4c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 3.5 0 6 4 4 7.95C19 16.466 12 21 12 21z"
-      fill="rgba(255,255,255,0.18)"
+      fill="url(#goldHighlight)"
     />
   </svg>
 </motion.div>
